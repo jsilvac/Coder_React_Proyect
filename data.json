@@ -1,0 +1,71 @@
+
+[
+    {   
+        "id" : 1,
+        "name" : "mustang",
+        "precio" : 2000,
+        "url_img" : "/resources/images/mustang.png"
+    },
+    {
+        "id" : 2,
+        "name" : "BMW",
+        "precio" : 1500,
+        "url_img" : "/resources/images/bmw.png"
+    }
+    ,
+    {
+        "id" : 3,
+        "name" : "Camaro",
+        "precio" : 1900,
+        "url_img" : "/resources/images/Camaro.png"
+    }
+    ,
+    {
+        "id" : 4,
+        "name" : "Corolla",
+        "precio" : 1100,
+        "url_img" : "/resources/images/corolla.png"
+    }
+    ,
+    {
+        "id" : 5,
+        "name" : "Jaguar",
+        "precio" : 1500,
+        "url_img" : "/resources/images/jaguar.png"
+    }
+    ,
+    {
+        "id" : 6,
+        "name" : "Nissan primera",
+        "precio" : 1300,
+        "url_img" : "/resources/images/nissan1.png"
+    }
+    ,
+    {
+        "id" : 7,
+        "name" : "Porche",
+        "precio" : 4000,
+        "url_img" : "/resources/images/porche.png"
+    }
+    ,
+    {
+        "id" : 8,
+        "name" : "L200",
+        "precio" : 1000,
+        "url_img" : "/resources/images/l200.png"
+    }
+    ,
+    {
+        "id" : 9,
+        "name" : "Veyron",
+        "precio" : 6500,
+        "url_img" : "/resources/images/veyron.png"
+    }
+    
+
+    
+    
+    
+    
+]
+
