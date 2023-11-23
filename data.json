@@ -4,62 +4,153 @@
         "id" : 1,
         "name" : "mustang",
         "precio" : 2000,
-        "url_img" : "/resources/images/mustang.png"
+        "url_img" : "/resources/images/mustang.png",
+        "categoria" :"deportivo",
+        "detalle": {
+            "moto": 1.5,
+            "color" : {
+                "azul" : "azul",
+                "rojo" : "rojo",
+                "amarillo": "amarillo"
+            },
+            "caja":"automatica"
+        }
     },
     {
         "id" : 2,
         "name" : "BMW",
         "precio" : 1500,
-        "url_img" : "/resources/images/bmw.png"
+        "url_img" : "/resources/images/bmw.png",
+        "categoria" :"deportivo",
+        "detalle": {
+            "moto": 1.5,
+            "color" : {
+                "azul" : "azul",
+                "rojo" : "rojo",
+                "amarillo": "amarillo"
+            },
+            "caja":"automatica"
+        }
+        
     }
     ,
     {
         "id" : 3,
         "name" : "Camaro",
         "precio" : 1900,
-        "url_img" : "/resources/images/Camaro.png"
+        "url_img" : "/resources/images/Camaro.png",
+        "categoria" :"deportivo",
+        "detalle": {
+            "moto": 1.5,
+            "color" : {
+                "azul" : "azul",
+                "rojo" : "rojo",
+                "amarillo": "amarillo"
+            },
+            "caja":"automatica"
+        }
     }
     ,
     {
         "id" : 4,
         "name" : "Corolla",
         "precio" : 1100,
-        "url_img" : "/resources/images/corolla.png"
+        "url_img" : "/resources/images/corolla.png",
+        "categoria" :"vehiculo",
+        "detalle": {
+            "moto": 1.5,
+            "color" : {
+                "azul" : "azul",
+                "rojo" : "rojo",
+                "amarillo": "amarillo"
+            },
+            "caja":"manual"
+        }
     }
     ,
     {
         "id" : 5,
         "name" : "Jaguar",
         "precio" : 1500,
-        "url_img" : "/resources/images/jaguar.png"
+        "url_img" : "/resources/images/jaguar.png",
+        "categoria" :"deportivo",
+        "detalle": {
+            "moto": 1.5,
+            "color" : {
+                "azul" : "azul",
+                "rojo" : "rojo",
+                "amarillo": "amarillo"
+            },
+            "caja":"automatica"
+        }
     }
     ,
     {
         "id" : 6,
         "name" : "Nissan primera",
         "precio" : 1300,
-        "url_img" : "/resources/images/nissan1.png"
+        "url_img" : "/resources/images/nissan1.png",
+        "categoria" :"vehiculo",
+        "detalle": {
+            "moto": 1.5,
+            "color" : {
+                "azul" : "azul",
+                "rojo" : "rojo",
+                "amarillo": "amarillo"
+            },
+            "caja":"manual"
+        }
     }
     ,
     {
         "id" : 7,
         "name" : "Porche",
         "precio" : 4000,
-        "url_img" : "/resources/images/porche.png"
+        "url_img" : "/resources/images/porche.png",
+        "categoria" :"deportivo",
+        "detalle": {
+            "moto": 1.5,
+            "color" : {
+                "azul" : "azul",
+                "rojo" : "rojo",
+                "amarillo": "amarillo"
+            },
+            "caja":"automatica"
+        }
     }
     ,
     {
         "id" : 8,
         "name" : "L200",
         "precio" : 1000,
-        "url_img" : "/resources/images/l200.png"
+        "url_img" : "/resources/images/l200.png",
+        "categoria" :"camioneta",
+        "detalle": {
+            "moto": 1.5,
+            "color" : {
+                "azul" : "azul",
+                "rojo" : "rojo",
+                "amarillo": "amarillo"
+            },
+            "caja":"manual"
+        }
     }
     ,
     {
         "id" : 9,
         "name" : "Veyron",
         "precio" : 6500,
-        "url_img" : "/resources/images/veyron.png"
+        "url_img" : "/resources/images/veyron.png",
+        "categoria" :"deportivo",
+        "detalle": {
+            "moto": 1.5,
+            "color" : {
+                "azul" : "azul",
+                "rojo" : "rojo",
+                "amarillo": "amarillo"
+            },
+            "caja":"automatica"
+        }
     }
     
 

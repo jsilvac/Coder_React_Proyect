@@ -1,16 +1,17 @@
 import {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu,AiOutlineClose } from 'react-icons/ai'
+import ImgCarrito from "./imgCarrito";
 
 const links = [
     {
-        link:"/",
+        link:"./",
         text:"Home",
         id: 1
     },
     {
         link:"/car",
-        text:"Car",
+        text:<ImgCarrito></ImgCarrito>,
         id: 2
     }
 ];
@@ -19,18 +20,19 @@ const links = [
 export const NavBar = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
 
     const [ windowDimension, setWindowDimension ] = useState(
         {
             innerHeight: window.innerHeight,
-            innerWidth: window.innerWidth
+            innerWidth: window.innerWidth,
         }
     );
 
     const detectSize = () => {
         setWindowDimension({
             innerHeight: window.innerHeight,
-            innerWidth: window.innerWidth
+            innerWidth: window.innerWidth,
         })
     };
 
@@ -41,52 +43,42 @@ export const NavBar = () => {
         };
     }, [windowDimension.innerWidth]);
 
+  
 
     return (
-        <div className=" h-20 px-5 py-2 mt-1 border flex items-center justify-between w-full ">
-            
+        <div className="h-20 px-5 py-2 mt-1 border flex items-center justify-between w-full">
             <Link to={"/"}>
-                <img 
+                <img
                 src="/resources/images/logo_js.png"
-                className=" h-20 px-2 py-2 "
+                className="h-20 px-2 py-2"
                 />
             </Link>
-            {
-                windowDimension.innerWidth > 768 
-                ? links.map((l) => (
-                    <Link
-                        className=" text-xl"
-                        to={l.link}
-                        key={l.id}
-                    >
-                        {l.text}
-                    </Link>
-                ))
-                : isMenuOpen &&
+            {windowDimension.innerWidth > 768 ? (
                 links.map((l) => (
                     <Link
-                        className=" text-xl"
+                        className="text-xl"
                         to={l.link}
                         key={l.id}
                     >
-                        {l.text}
+                    {l.text}
                     </Link>
                 ))
-            }
-            
-            <div className=" flex flex-nowrap" >
-            {
-                !isMenuOpen ? AiOutlineMenu( <AiOutlineMenu size={34}  onClick={() => setIsMenuOpen(true)}/>
-                ):(<AiOutlineClose size={24} onClick={() => setIsMenuOpen(false)}/>)
-            }
-                <img 
-                src="/resources/images/carrito.png" 
-                className=" w-10 h-10   "
-                ></img>
-                <p className=" text-3xl" >0</p>
-            </div>
+            ) : (
+                isMenuOpen && (
+                    <div>
+                        {isMenuOpen ? (
+                            <AiOutlineClose size={24} onClick={() => setIsMenuOpen(false)} />
+                        ) : (
+                            <AiOutlineMenu size={34} onClick={() => setIsMenuOpen(true)} />
+                        )}
+                        <ImgCarrito />
+                    </div>
+                )
+            )}
+            <p className="text-3xl">0</p>
         </div>
     );
+    
 }
 
 
