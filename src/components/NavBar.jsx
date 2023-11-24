@@ -10,9 +10,14 @@ const links = [
         id: 1
     },
     {
+        link:"/categoria/",
+        text:"Categorias",
+        id: 2
+    },
+    {
         link:"/carrito/",
         text:<ImgCarrito></ImgCarrito>,
-        id: 2
+        id: 3
     }
 ];
 

@@ -7,6 +7,7 @@ import Layout from './components/Layout.jsx'
 import Car from './screens/car.jsx'
 import Home from './screens/home.jsx'
 import Carrito from './screens/Carrito.jsx'
+import Categoria from './screens/Categoria.jsx'
 
 
 const router = createBrowserRouter([
@@ -24,8 +25,12 @@ const router = createBrowserRouter([
         element: <Car/>
       },
       {
-        path:'/Carrito',
+        path:'/carrito',
         element:<Carrito/>
+      },
+      {
+        path:'/categoria',
+        element:<Categoria/>
       }
 
     ]

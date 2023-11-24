@@ -9,18 +9,37 @@ export const ItemListContainer = ( {id} ) => {
 
     const [dato, setDato] = useState([])
 
-    const [decar, setDecar ] = useState('')
-
-    const location= useLocation()
     
+    const filtrado = () => {
+        const ids = [...id].map(id => parseInt(id));
+        const filteredData = data.filter(producto => ids.includes(producto.id));
+        setDato(filteredData);
+        console.log(filteredData);
+    };
+    
+    useEffect(() => {
+
+        console.log(dato)
+        if(id != null && id.length > 0){
+
+            filtrado()
+
+            return;
+        }
+       
+        setDato(data);
+
+        return () => {
+            setDato([])
+        };
+    }, [id]);
 
     useEffect(() => {
 
-        
+        console.log(id)
         if(id != null && id.length > 0){
 
-            const filteredData = data.filter(producto => producto.id === Number(id));
-            setDato(filteredData);
+            filtrado()
 
             return;
         }
