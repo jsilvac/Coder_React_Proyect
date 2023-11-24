@@ -1,22 +1,16 @@
-import { Cards } from '../components/Cards';
 import { ItemListContainer } from '../components/ItemListContainer';
+import { useParams } from 'react-router-dom';
 import data from '../../data.json'
 
-const Car = ({id}) => {
+const Car = () => {
+
+    const { id } = useParams();
+
     return (
-        <ItemListContainer>
-            {data
-                .filter(product => product.id === id)
-                .map(product => (
-                    <Cards
-                    key={product.id}
-                    name={product.name}
-                    precio={product.precio}
-                    imagen={product.url_img}
-                    />
-                ))
-            }
-      </ItemListContainer>
+        
+        <ItemListContainer
+            id={id}
+        />
     );
 }
 

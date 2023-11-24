@@ -10,7 +10,7 @@ const links = [
         id: 1
     },
     {
-        link:"/car",
+        link:"/carrito/",
         text:<ImgCarrito></ImgCarrito>,
         id: 2
     }
@@ -53,8 +53,8 @@ export const NavBar = () => {
                 className="h-20 px-2 py-2"
                 />
             </Link>
-            {windowDimension.innerWidth > 768 ? (
-                links.map((l) => (
+            {/* {windowDimension.innerWidth > 768 ? ( */}
+             {   links.map((l) => (
                     <Link
                         className="text-xl"
                         to={l.link}
@@ -62,8 +62,8 @@ export const NavBar = () => {
                     >
                     {l.text}
                     </Link>
-                ))
-            ) : (
+                ))}
+            {/* ) : (
                 isMenuOpen && (
                     <div>
                         {isMenuOpen ? (
@@ -74,7 +74,7 @@ export const NavBar = () => {
                         <ImgCarrito />
                     </div>
                 )
-            )}
+            )} */}
             <p className="text-3xl">0</p>
         </div>
     );
