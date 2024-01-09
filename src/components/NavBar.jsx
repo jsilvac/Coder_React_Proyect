@@ -19,6 +19,7 @@ const links = [
         text:<ImgCarrito></ImgCarrito>,
         id: 3
     }
+
 ];
 
 
@@ -80,7 +81,7 @@ export const NavBar = () => {
                     </div>
                 )
             )} */}
-            <p className="text-3xl">0</p>
+           
         </div>
     );
     

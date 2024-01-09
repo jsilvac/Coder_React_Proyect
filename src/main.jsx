@@ -4,10 +4,11 @@ import App from './App.jsx'
 import './index.css'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import Layout from './components/Layout.jsx'
-import Car from './screens/car.jsx'
+import Car from './screens/Car.jsx'
 import Home from './screens/home.jsx'
 import Carrito from './screens/Carrito.jsx'
 import Categoria from './screens/Categoria.jsx'
+import { GlobalContextProvider } from './context/GlobalContext.jsx'
 
 
 const router = createBrowserRouter([
@@ -40,7 +41,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <App /> */}
-    <RouterProvider router={router}/>
+    <GlobalContextProvider>
+      {/* <App /> */}
+      <RouterProvider router={router}/>
+    </GlobalContextProvider>
   </React.StrictMode>,
 )

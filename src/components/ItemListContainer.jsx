@@ -8,8 +8,7 @@ import { useLocation } from 'react-router-dom';
 export const ItemListContainer = ( {id} ) => {
 
     const [dato, setDato] = useState([])
-
-    
+  
     const filtrado = () => {
         const ids = [...id].map(id => parseInt(id));
         const filteredData = data.filter(producto => ids.includes(producto.id));
@@ -51,11 +50,9 @@ export const ItemListContainer = ( {id} ) => {
         };
     }, []);
 
-
     return (
         <div className=" flex flex-wrap text-center items-center content-center justify-center">
           
-            
             <section className=" flex flex-wrap">
                 {dato.map( prod => 
                 

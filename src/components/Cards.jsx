@@ -6,7 +6,7 @@ const Cards = ( {id,imagen,name,precio} ) =>{
 
  const [showButton, setShowButton] = useState(false)
 
- console.log(showButton)
+ //console.log(showButton)
 
   return (
     <div className=" w-44 h-auto m-5 border border-solid border-gray-800 rounded p-2 text-center hover:bg-slate-900">
@@ -23,7 +23,9 @@ const Cards = ( {id,imagen,name,precio} ) =>{
               <p className=" font-bold">${ precio }</p>
           </div>
           
-           <AddItemsCarBtn/> 
+           <AddItemsCarBtn
+            id={id}
+           /> 
           
     </div>
   )

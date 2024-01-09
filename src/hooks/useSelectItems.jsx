@@ -17,9 +17,9 @@ const useSelectItems = (label, opciones) => {
 
   const SelectItems = () => (
     <>
-      <label className=' font-bold'>{label}</label>
+      <label className='font-bold'>{label}</label>
       <select 
-        className=' p-1'
+        className='p-1'
         value={state} 
         onChange={e => setState(e.target.value)}>
 
