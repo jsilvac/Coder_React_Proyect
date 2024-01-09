@@ -1,12 +1,14 @@
 import useSelectItems from "../hooks/useSelectItems"
-import data from '../../data.json';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ItemListContainer } from "../components/ItemListContainer";
+import { GlobalContext } from "../context/GlobalContext";
 
 
 const Categoria = () => {
 
-    const [ categoriaSeleccionada, SelectItem] = useSelectItems('Selecciona catgoria', data)
+    const { data } = useContext(GlobalContext)
+
+    const [ categoriaSeleccionada, SelectItem] = useSelectItems('Selecciona categoria', data)
 
     const [categoria, setCategoria] = useState([])
 
@@ -14,23 +16,25 @@ const Categoria = () => {
 
     useEffect(() => {
 
-         // Filtrar elementos de data que tienen la categoría seleccionada
+         
         const elementosConCategoria = data.filter(item => item.categoria === categoriaSeleccionada);
 
-        console.log(elementosConCategoria)
-    // Obtener los id de esos elementos
+        console.log("Elementos con categoría:", elementosConCategoria);
+
         const ids = elementosConCategoria.map(item => item.id);
 
-        console.log(ids)
+        console.log("IDs:", ids);
 
-    // Establecer el estado con los id
+  
         setCategoria(ids);
         
-        console.log(categoria)
-        return () => {
-            setCategoria([])
-        };
+        console.log('categoria: ', categoria)
+        
     }, [categoriaSeleccionada]);
+
+    useEffect(() => {
+       console.log(data)
+    }, []);
 
     return (
 

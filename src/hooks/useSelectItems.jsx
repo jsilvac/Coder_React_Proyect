@@ -10,6 +10,8 @@ const useSelectItems = (label, opciones) => {
     const categoriasUnicas = [...new Set(opciones.map(item => item.categoria))];
     setCategoriasUnicas(categoriasUnicas);
 
+    console.log('categorias nicas : ', categoriasUnicas)
+
     return () => {
       setCategoriasUnicas([]);
     };

@@ -1,11 +1,12 @@
 import { createContext, useContext, useState } from "react";
-import data from '../../data.json';
+
 
 export const GlobalContext = createContext(null)
 
 export const GlobalContextProvider = ({ children }) => {
 
     const [carrito, setCarrito] = useState([])
+    const [data, setData] = useState([])
 
     const agregaCarrito = (id, quantity) => {
         if (!id || isNaN(quantity) || quantity <= 0) {
@@ -42,7 +43,9 @@ export const GlobalContextProvider = ({ children }) => {
     }
 
     const objectValue = {
+        
         data,
+        setData,
         carrito,
         agregaCarrito,
         eliminarDelCarrito,
